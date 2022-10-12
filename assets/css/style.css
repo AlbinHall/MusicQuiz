@@ -1,0 +1,15 @@
+
+/* Imported fonts etc*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap');
+
+/* structure and fonts etc */
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+/*  */
