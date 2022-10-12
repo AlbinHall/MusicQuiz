@@ -36,11 +36,10 @@ h1, h2, h3 {
 }
 
 /* styling for buttons and button container */
-.container-div .question h2 {
-    margin-top: 20%;
-    border: 1px solid black;
-    
-}
+/* #question { */
+ align-self: center;
+ display:
+/* } */
 
 .btn-div {
     display: grid;
