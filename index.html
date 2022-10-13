@@ -14,20 +14,32 @@
             <h1>name of website</h1>
         </nav>
     </header>
-
+<!-- The score for the quiz-->
     <div>
         <p class="scores">Score: <span id="score">0</span></p>
     </div>
-    
+
+<!-- The log in form for the username-->
+    <section class="start-btn">
+    <form action="Username"  >
+        <label for="username"></label>
+        <input type="text" name="username" id="username" placeholder="Username Here!" required>
+        <button type="submit" class="start-button">Start The Quiz!</button>
+    </form>
+    </section>
+
+<!-- The quiz questions etc-->
     <div class="container-div">
-        <h2 id="question">question h2</h2>
-        <div id ="holdingButtons" class="btn-div">
-           <button class="btn1">answer1</button>
-           <button class="btn2">answer2</button>
-           <button class="btn3">answer3</button>
-           <button class="btn4">answer4</button>
+        <h2 id="question" class="hide">question h2</h2>
+        <div id ="holdingButtons" class="btn-div hide">
+           <button class="btn">answer1</button>
+           <button class="btn">answer2</button>
+           <button class="btn">answer3</button>
+           <button class="btn">answer4</button>
         </div>
     </div>
+
+    <!-- the buttons for navigating the site-->
 <section class="extra-buttons">
     <div>
         <button class="next">Next</button>
