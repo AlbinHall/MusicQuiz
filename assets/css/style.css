@@ -24,8 +24,9 @@ h1, h2, h3 {
 
 .container-div {
     display: flex;
-    width: 80%;
-    height: 800px;
+    width: 800px;
+    max-width: 80%;
+    height: 600px;
     margin: auto;
     justify-content: center;
    
@@ -36,24 +37,25 @@ h1, h2, h3 {
 }
 
 /* styling for buttons and button container */
-/* #question { */
- align-self: center;
- display:
-/* } */
 
 .btn-div {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 10%;
-    margin-bottom: 20px;
-    margin-top: 40%;
-    position: relative;
+    position: absolute;
+    margin-top: 300px;
+    margin-bottom: 75px;
+    gap: 50px;
+
+    
 }
 
 .btn1, .btn2, .btn3, .btn4 {
-    margin: 5%;
-    padding-left: 200px ;
-    padding-right: 200px;
-    
+border-radius: 10px;
+width: 200px;
+height: 100px;
+
 } 
 
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
+box-shadow: 0 0 10px;
+}
