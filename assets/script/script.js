@@ -5,7 +5,7 @@ let answerButton = document.getElementById("holdingButtons")
 let questionHeader = document.getElementById("question")
 let extraButtonContainer = document.getElementById("extra-div")
 
-let span = document.getElementsByTagName("span")
+
 let i = 0
 
 
@@ -19,6 +19,8 @@ function startGame() {
     answerButton.classList.remove("hide")
     questionHeader.classList.remove("hide")
     extraButtonContainer.classList.remove("hide")
+
+    displayQuestion()
 }
 
 function answers(){
@@ -26,18 +28,15 @@ function answers(){
 }
 
 function displayQuestion() {
-    for (let i = 0;i < span.length; i++ ) {
-        questionHeader.innerHTML= "Question" + (i+1) + ": " + questionHolder[i].question;
+        questionHeader.innerHTML= "Question " + (i+1) + ": " + questionHolder[i].question;
         button1.innerHTML = questionHolder[i].option[0];
         button2.innerHTML = questionHolder[i].option[1];
         button3.innerHTML = questionHolder[i].option[2];
         button4.innerHTML = questionHolder[i].option[3];
         
-    }
-
 }
 
-displayQuestion()
+
 
 function nextQuestion() {
     
@@ -76,7 +75,7 @@ let questionHolder = [{
 }
 ]
 
-let button1 = document.getElementById(btn1)
-let button2 = document.getElementById(btn2)
-let button3 = document.getElementById(btn3)
-let button4 = document.getElementById(btn4)
+let button1 = document.getElementById("btn1")
+let button2 = document.getElementById("btn2")
+let button3 = document.getElementById("btn3")
+let button4 = document.getElementById("btn4")
