@@ -49,14 +49,17 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount(e) {
-    if (e.innerHTML === questionHolder[i].answer && score < questionHolder.length) {
-        score = score+1;
-        document.getElementById(e.id).style.background = "green"
+function scoreCount(btn) {
+    if (btn.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+        scores.innerHTML = ++scores.innerHTML
+        btn.classList.add("btn-correct")
+        alert("Well played")
     } else {
-        document.getElementById(e.id).style.background = "red"
+        btn.classList.add("btn-wrong")
+        alert("Better luck next time")
     }
     setTimeout(displayNextQuestion, 300)
+
 }
 /**
  * takes you to the next question
@@ -66,8 +69,9 @@ function displayNextQuestion() {
         i = i+1
         displayQuestion();
     } else {
-        scores.innerHTML = score + "/" + questionHolder.length
+        scores.innerHTML = score + "/" + questionHolder.length;
     }
+    
 }
 
 function returnHome() {
