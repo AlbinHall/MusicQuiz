@@ -6,14 +6,16 @@ let questionHeader = document.getElementById("question")
 let extraButtonContainer = document.getElementById("extra-div")
 
 let next = document.getElementById("next")
-let score = document.getElementById("score")
+let scores = document.getElementById("score")
 let btn = document.getElementsByClassName("btn")
 
 
 let i = 0
+let score = 0
 
 
 startButton.addEventListener("click", startGame)
+next.addEventListener("click", displayNextQuestion)
 
 /**
  * makes so that the sign up goes away and starts the quiz
@@ -50,6 +52,17 @@ function scoreCount(e) {
         btn.classList.add(".btn-correct");
     } else {
         btn.classList.add("btn-wrong")
+    }
+}
+/**
+ * takes you to the next question
+ */
+function displayNextQuestion() {
+    if (i < questionHolder.length -1) {
+        i = i+1
+        displayQuestion();
+    } else {
+        scores.innerHTML = score + "/" + questionHolder.length
     }
 }
 
