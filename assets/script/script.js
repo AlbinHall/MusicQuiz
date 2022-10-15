@@ -37,23 +37,23 @@ let questionHolder = [{
     answer : "Lynyrd Skynyrd"
 }
 {
-    question : "",
-    option : ["", "", "", ""],
-    answer : ""
+    question : "Who produced the legendary album called 'Abbey Road' made by The Beatles?",
+    option : ["John Lennon", "Phil Spector ", "Paul Mccartney", "George Martin"],
+    answer : "George Martin"
 }
 {
-    question : "",
-    option : ["", "", "", ""],
-    answer : ""
+    question : "In which movie is 'Where is my mind' by Pixies played?",
+    option : ["Fight Club", "Saving private Ryan", "lock stock and two smoking barrels", "Snatch"],
+    answer : "Fight Club"
 }
 {
-    question : "",
-    option : ["", "", "", ""],
-    answer : ""
+    question : "In which year did the album 'By the way' made by RHCP got released? ",
+    option : ["1998", "2010", "2002", "1994"],
+    answer : "2002"
 }
 {
-    question : "",
-    option : ["", "", "", ""],
-    answer : ""
+    question : "Where did Ringo Starr from The beatles grow up?",
+    option : ["London", "Glasgow", "Manchester", "Liverpool"],
+    answer : "Liverpool"
 }
 ]
