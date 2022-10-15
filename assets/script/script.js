@@ -9,6 +9,7 @@ let next = document.getElementById("next")
 let scores = document.getElementById("score")
 let btn = document.getElementsByClassName("btn")
 
+let home = document.getElementById("return-home")
 
 let i = 0
 let score = 0
@@ -16,6 +17,8 @@ let score = 0
 
 startButton.addEventListener("click", startGame)
 next.addEventListener("click", displayNextQuestion)
+home.addEventListener("click", returnHome)
+
 
 /**
  * makes so that the sign up goes away and starts the quiz
@@ -49,10 +52,11 @@ function displayQuestion() {
 function scoreCount(e) {
     if (e.innerHTML === questionHolder[i].answer && score < questionHolder.length) {
         score = score+1;
-        btn.classList.add(".btn-correct");
+        document.getElementById(e.id).style.background = "green"
     } else {
-        btn.classList.add("btn-wrong")
+        document.getElementById(e.id).style.background = "red"
     }
+    setTimeout(displayNextQuestion, 300)
 }
 /**
  * takes you to the next question
@@ -64,6 +68,10 @@ function displayNextQuestion() {
     } else {
         scores.innerHTML = score + "/" + questionHolder.length
     }
+}
+
+function returnHome() {
+    location.reload
 }
 
 
