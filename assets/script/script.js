@@ -10,6 +10,7 @@ let scores = document.getElementById("score")
 let btn = document.getElementsByClassName("btn")
 
 let home = document.getElementById("return-home")
+let quizDiv = document.getElementsByClassName("container-div")
 
 let i = 0
 let score = 0
@@ -49,13 +50,13 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount(btn) {
-    if (btn.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+function scoreCount(e) {
+    if (e.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
-        btn.classList.add("btn-correct")
+        document.getElementById(e.id).style.background = "green"
         alert("Well played")
     } else {
-        btn.classList.add("btn-wrong")
+        document.getElementById(e.id).style.background = "red"
         alert("Better luck next time")
     }
     setTimeout(displayNextQuestion, 300)
@@ -70,12 +71,13 @@ function displayNextQuestion() {
         displayQuestion();
     } else {
         scores.innerHTML = score + "/" + questionHolder.length;
+        btn.style.display = "block"
     }
     
 }
 
 function returnHome() {
-    location.reload
+    location.reload()
 }
 
 
