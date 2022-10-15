@@ -26,14 +26,34 @@ function nextQuestion() {
 
 }
 
-let question1
-
-let question2
-
-let question3
-
-let question4
-
-let question5
-
-let question6
+let questionHolder = [{
+    question : "Who was the lead singer of Nirvana?",
+    option : ["Kurt Cobain", "Mick Jagger", "Lionel Richie", "Dave Grohl"],
+    answer : "Kurt Cobain"
+}
+{
+    question : "What was the name of the band that made the song 'Sweet Home Alabama'?",
+    option : ["The Rolling Stones", "Herman's Hermits", "Lynyrd Skynyrd", "U2"],
+    answer : "Lynyrd Skynyrd"
+}
+{
+    question : "",
+    option : ["", "", "", ""],
+    answer : ""
+}
+{
+    question : "",
+    option : ["", "", "", ""],
+    answer : ""
+}
+{
+    question : "",
+    option : ["", "", "", ""],
+    answer : ""
+}
+{
+    question : "",
+    option : ["", "", "", ""],
+    answer : ""
+}
+]
