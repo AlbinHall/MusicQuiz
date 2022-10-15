@@ -5,6 +5,10 @@ let answerButton = document.getElementById("holdingButtons")
 let questionHeader = document.getElementById("question")
 let extraButtonContainer = document.getElementById("extra-div")
 
+let next = document.getElementById("next")
+let score = document.getElementById("score")
+let btn = document.getElementsByClassName("btn")
+
 
 let i = 0
 
@@ -36,11 +40,19 @@ function displayQuestion() {
         
 }
 
-
-
-function nextQuestion() {
-    
+/**
+ * 
+ * score counter and declairs backgroundcolor of button
+ */
+function scoreCount(e) {
+    if (e.innerHTML === questionHolder[i].answer && score < questionHolder.length) {
+        score = score+1;
+        btn.classList.add(".btn-correct");
+    } else {
+        btn.classList.add("btn-wrong")
+    }
 }
+
 
 // The questions, answer options and the correct answer for the quiz.
 let questionHolder = [{
