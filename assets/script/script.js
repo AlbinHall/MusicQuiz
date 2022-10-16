@@ -14,6 +14,7 @@ let home = document.getElementById("return-home")
 let quizDiv = document.getElementById("container-div")
 
 let finalPage = document.getElementById("final-page")
+let footer = document.getElementById("footer")
 
 
 
@@ -35,6 +36,7 @@ function startGame() {
     answerButton.classList.remove("hide")
     questionHeader.classList.remove("hide")
     extraButtonContainer.classList.remove("hide")
+    footer.classList.add("hide")
 
 
     displayQuestion()
@@ -42,7 +44,7 @@ function startGame() {
 
 
 function displayQuestion() {
-        questionHeader.innerHTML= "Question " + (i+1) + ":" + questionHolder[i].question;
+        questionHeader.innerHTML= "Question " + (i+1) + "<br />" + questionHolder[i].question;
         button1.innerHTML = questionHolder[i].option[0];
         button2.innerHTML = questionHolder[i].option[1];
         button3.innerHTML = questionHolder[i].option[2];
@@ -78,6 +80,7 @@ function displayNextQuestion() {
         questionHeader.classList.add("hide")
         extraButtonContainer.classList.add("hide")
         quizDiv.style.display = "none"
+        footer.classList.remove("hide")
       }
 }
 

@@ -53,12 +53,14 @@ margin-bottom: 50px;
 
 
 /* styling for the sign up username etc */
+
 #start-btn {
     margin-top: 250px;
-    margin-left: 40%;
-    margin-right: 20%;
     position:absolute;
-    justify-content: center;
+    text-align: center;  
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
 }
 
 #username {
@@ -67,6 +69,7 @@ height: 100px;
 font-size: 200%;
 padding:5%;
 border-radius: 10px;
+text-align: center;
 }
 
 #start-button {
@@ -75,6 +78,7 @@ border-radius: 10px;
     border-radius: 10px;
     font-size: 200%;
     margin: 10px;
+    text-align: center;
 }
 
 #start-button:hover {
@@ -114,6 +118,7 @@ box-shadow: 0 0 10px 3px black;
 #question {
     margin-top: 100px;
     font-size: 200%;
+    text-align: center;
 }
 
  /* styling of the buttons "next" and "return" situated under the question/answer card*/
@@ -158,6 +163,7 @@ box-shadow: 0 0 10px 3px black;
     width: 90%;
     height: 90%;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 /* styling of the social media icons etc */
