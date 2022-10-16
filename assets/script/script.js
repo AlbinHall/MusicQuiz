@@ -33,12 +33,9 @@ function startGame() {
     displayQuestion()
 }
 
-function answers(){
-
-}
 
 function displayQuestion() {
-        questionHeader.innerHTML= "Question " + (i+1) + ": " + questionHolder[i].question;
+        questionHeader.innerHTML= "Question " + (i+1) + ":" + questionHolder[i].question;
         button1.innerHTML = questionHolder[i].option[0];
         button2.innerHTML = questionHolder[i].option[1];
         button3.innerHTML = questionHolder[i].option[2];
@@ -50,17 +47,15 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount(e) {
-    if (e.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+function scoreCount(a) {
+    if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
-        document.getElementById(e.id).style.background = "green"
-        alert("Well played")
+    a.classList.add("btn-correct")
+        alert("Well played!")
     } else {
-        document.getElementById(e.id).style.background = "red"
-        alert("Better luck next time")
+        a.classList.add("btn-wrong")
+        alert("Better luck next time!")
     }
-    setTimeout(displayNextQuestion, 300)
-
 }
 /**
  * takes you to the next question
@@ -69,12 +64,17 @@ function displayNextQuestion() {
     if (i < questionHolder.length -1) {
         i = i+1
         displayQuestion();
+        initialClass();
     } else {
         scores.innerHTML = score + "/" + questionHolder.length;
-        btn.style.display = "block"
     }
-    
 }
+
+function initialClass(b) {
+    document.getElementsByClassName("btn").style.background = "initial"
+}
+
+
 
 function returnHome() {
     location.reload()
