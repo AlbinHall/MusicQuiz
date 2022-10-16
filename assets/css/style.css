@@ -33,11 +33,32 @@ font-size: 30px;
 margin-bottom: 50px;
 }
 
+
+/* structual styling for question/answer div*/
+
+.container-div {
+    display: none;
+    width: 800px;
+    max-width: 80%;
+    height: 600px;
+    margin: auto;
+    justify-content: center;
+   
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 3px;     
+    background-color: whitesmoke;
+}
+
+
 /* styling for the sign up username etc */
 #start-btn {
+    display: none;
     margin-top: 250px;
     margin-left: 40%;
-position: absolute;
+    margin-right: 20%;
+    position:absolute;
+    justify-content: center;
 }
 
 #username {
@@ -62,21 +83,7 @@ border-radius: 10px;
 }
 
 
-/* structual styling for question/answer div*/
 
-.container-div {
-    display: flex;
-    width: 800px;
-    max-width: 80%;
-    height: 600px;
-    margin: auto;
-    justify-content: center;
-   
-    border: 1px solid black;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 3px;     
-    background-color: whitesmoke;
-}
 
 /* styling for buttons and button container */
 
@@ -104,14 +111,6 @@ color: whitesmoke;
 box-shadow: 0 0 10px 3px black;
 }
 
-/* got help with the idé from web dev simplifyed youtube */
-.btn-correct {
-    background-color: rgb(9, 97, 9);
-}
-
-.btn-wrong {
-    background-color: rgb(122, 19, 19);
-}
 
 /* the displayd question styling */
 
@@ -144,9 +143,22 @@ box-shadow: 0 0 10px 3px black;
 }
 
 /* Final page displaying scores */
+
 #final-page {
-    display: none;
+    
+    margin:auto;
+    font-size: 200%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    
+    border: 1px solid black;
+    background-color: whitesmoke;
+
+
 }
+
 
 /* styling of the social media icons etc */
 

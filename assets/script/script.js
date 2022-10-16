@@ -32,9 +32,9 @@ home.addEventListener("click", returnHome)
  */
 function startGame() {
     startButtonContainer.classList.add("hide")
-    answerButton.classList.remove("hide")
-    questionHeader.classList.remove("hide")
-    extraButtonContainer.classList.remove("hide")
+    // answerButton.classList.remove("hide")
+    // questionHeader.classList.remove("hide")
+    // extraButtonContainer.classList.remove("hide")
 
     displayQuestion()
 }
@@ -78,7 +78,6 @@ function displayNextQuestion() {
         answerButton.classList.add("hide")
         questionHeader.classList.add("hide")
         extraButtonContainer.classList.add("hide")
-        
       }
 }
 
