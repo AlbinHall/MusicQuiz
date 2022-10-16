@@ -7,6 +7,7 @@ let extraButtonContainer = document.getElementById("extra-div")
 
 let next = document.getElementById("next")
 let scores = document.getElementById("score")
+let scoreDiv = document.getElementById("score-div")
 let btn = document.getElementsByClassName("btn")
 
 let home = document.getElementById("return-home")
@@ -19,6 +20,10 @@ let score = 0
 startButton.addEventListener("click", startGame)
 next.addEventListener("click", displayNextQuestion)
 home.addEventListener("click", returnHome)
+
+next.addEventListener("click", function onClick(event){
+
+})
 
 
 /**
@@ -40,7 +45,6 @@ function displayQuestion() {
         button2.innerHTML = questionHolder[i].option[1];
         button3.innerHTML = questionHolder[i].option[2];
         button4.innerHTML = questionHolder[i].option[3];
-        
 }
 
 /**
@@ -50,12 +54,13 @@ function displayQuestion() {
 function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
-    a.classList.add("btn-correct")
+        document.getElementById(a.id).style.background = "green"
         alert("Well played!")
     } else {
-        a.classList.add("btn-wrong")
+        document.getElementById(a.id).style.background = "red"
         alert("Better luck next time!")
     }
+    setTimeout(displayNextQuestion, 500)
 }
 /**
  * takes you to the next question
@@ -64,16 +69,11 @@ function displayNextQuestion() {
     if (i < questionHolder.length -1) {
         i = i+1
         displayQuestion();
-        initialClass();
     } else {
         scores.innerHTML = score + "/" + questionHolder.length;
+
     }
 }
-
-function initialClass(b) {
-    document.getElementsByClassName("btn").style.background = "initial"
-}
-
 
 
 function returnHome() {
