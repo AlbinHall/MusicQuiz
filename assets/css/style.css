@@ -55,12 +55,12 @@ margin-bottom: 50px;
 /* styling for the sign up username etc */
 
 #start-btn {
-    margin-top: 250px;
+    margin-top: 200px;
     position:absolute;
     text-align: center;  
-    display: grid;
-    grid-template-columns: auto;
-    margin: auto;
+    align-items: center;
+    justify-self: center;
+
 }
 
 #username {
@@ -167,16 +167,20 @@ box-shadow: 0 0 10px 3px black;
 }
 
 /* styling of the social media icons etc */
-.social-media {
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-    font-size: 200%;
+#footer-style{
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        font-size: 200%;
 }
 
-.social-media a {
+a {
     color: black;
     margin: 5%;
+}
+
+#a1:hover, #a2:hover, #a3:hover, #a4:hover {
+    font-size: 300%;
 }
 
 /* the class that makes everything disipears in the loading of the page */

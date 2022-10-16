@@ -25,17 +25,19 @@
 <!-- The quiz questions etc-->
     <div id="container-div">
         <h2 id="question" class="hide"></h2>
+
+                <!-- The log in form for the username-->
+                <div id="start-btn">
+                    <label for="username"></label>
+                    <input type="text" name="username" id="username" placeholder="Username Here!">
+                    <button type="submit" id="start-button">Press To Start!</button>
+                </div>
+
         <divs id="holdingButtons" class="btn-div hide">
            <button onclick="scoreCount(this)" id="btn1" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn2" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn3" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn4" class="btn"></button>
-        </div>
-        <!-- The log in form for the username-->
-        <div id="start-btn">
-        <label for="username"></label>
-        <input type="text" name="username" id="username" placeholder="Username Here!">
-        <button type="submit" id="start-button">Press To Start!</button>
         </div>
     </div>
 
@@ -60,16 +62,16 @@
 <!--social media maybe use-->
     <footer id="footer" >
         <div>
-            <p class="social-media">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener" 
+            <p id="footer-style">
+            <a id="a1" href="https://www.facebook.com" target="_blank" rel="noopener" 
             aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener" 
+            <a id="a2" href="https://www.twitter.com" target="_blank" rel="noopener" 
             aria-label="Visit our twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener" 
+            <a id="a3" href="https://www.youtube.com" target="_blank" rel="noopener" 
             aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener" 
+            <a id="a4" href="https://www.instagram.com" target="_blank" rel="noopener" 
             aria-label="Visit our instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-            </p>
+        </p>
         </div>
     </footer>
     <script src="assets/script/script.js"></script>
