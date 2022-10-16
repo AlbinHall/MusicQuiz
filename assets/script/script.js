@@ -13,6 +13,8 @@ let btn = document.getElementsByClassName("btn")
 let home = document.getElementById("return-home")
 let quizDiv = document.getElementsByClassName("container-div")
 
+let finalPage = document.getElementById("final-page")
+
 
 
 let i = 0
@@ -54,15 +56,17 @@ function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
         // document.getElementById(a.id).classList.add("btn-correct")
+        alert("Well Done! :D")
     } else {
+        alert("Wrong Answer :(")
         // document.getElementById(a.id).classList.add("btn-wrong")
     }
 
 
-    setTimeout(displayNextQuestion, 500)
+    setTimeout(displayNextQuestion, 200)
 }
 /**
- * takes you to the next question
+ * takes you to the next question and displays final page at the end
  */
 function displayNextQuestion() {
     if (i < questionHolder.length -1) {
@@ -70,6 +74,11 @@ function displayNextQuestion() {
         displayQuestion();
     } else {
         scores.innerHTML = score + "/" + questionHolder.length
+        finalPage.style.display = "initial"
+        answerButton.classList.add("hide")
+        questionHeader.classList.add("hide")
+        extraButtonContainer.classList.add("hide")
+        
       }
 }
 

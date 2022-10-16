@@ -143,6 +143,11 @@ box-shadow: 0 0 10px 3px black;
     color: rgb(255, 255, 255);
 }
 
+/* Final page displaying scores */
+#final-page {
+    display: none;
+}
+
 /* styling of the social media icons etc */
 
 /* the class that makes everything disipears in the loading of the page */
