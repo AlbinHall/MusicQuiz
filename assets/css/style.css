@@ -10,7 +10,7 @@
 /* structure and fonts etc */
 
 body {
-    background-color: #1e6346;
+    background-color: #004643;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -18,6 +18,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
+    color: #abd1c6;
 }
 
 /*scores and header of the page */
@@ -32,6 +33,7 @@ display: flex;
 justify-content: center;
 font-size: 30px;
 margin-bottom: 50px;
+color: #fffffe;
 }
 
 
@@ -48,7 +50,7 @@ margin-bottom: 50px;
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: 0 0 15px 3px;     
-    background-color: whitesmoke;
+    background-color: #e16162;
 }
 
 
@@ -70,19 +72,26 @@ font-size: 200%;
 padding:5%;
 border-radius: 10px;
 text-align: center;
+background-color: #f9bc60;
+border: none;
+color: #001e1d;
 }
+
 
 #start-button {
     width: 50%;
     height: 100px;
     border-radius: 10px;
     font-size: 200%;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
+    background-color: #f9bc60;
+    border: none;
+    color: #001e1d;
 }
 
 #start-button:hover {
-    box-shadow: 0 0 10px
+    box-shadow: 0 0 10px;
 }
 
 
@@ -104,8 +113,8 @@ border-radius: 10px;
 border: none;
 width: 250px;
 height: 100px;
-background-color: #1e6346;
-color: whitesmoke;
+background-color: #f9bc60;
+color: #001e1d;
 } 
 
 .btn:hover {
@@ -119,6 +128,7 @@ box-shadow: 0 0 10px 3px black;
     margin-top: 100px;
     font-size: 200%;
     text-align: center;
+    color:#fffffe;
 }
 
  /* styling of the buttons "next" and "return" situated under the question/answer card*/
@@ -137,11 +147,13 @@ box-shadow: 0 0 10px 3px black;
     border-radius:15px;
     box-shadow: 0 0 15px 1px;
     margin-inline: 30px;
+    background-color: #f9bc60;
+    color: #001e1d;
 }
 /* more in depth styling with colors etc will be made */
 #next:hover, #return-home:hover {
-    background-color: #4c4c4caa;
-    color: rgb(255, 255, 255);
+    background-color: #001e1d;
+    color: #f9bc60;
 }
 
 /* Final page displaying scores */
@@ -154,9 +166,13 @@ box-shadow: 0 0 10px 3px black;
     text-align: center;
     width: auto;
     
-    border: 1px solid black;
-    background-color: whitesmoke;
+    border: none;
+    background-color: #f9bc60;
     border-radius: 10px;
+}
+
+#title {
+    color: #e16162;
 }
 
 #final-page img {
@@ -175,7 +191,7 @@ box-shadow: 0 0 10px 3px black;
 }
 
 a {
-    color: black;
+    color: #f9bc60;
     margin: 5%;
 }
 
