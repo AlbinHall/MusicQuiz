@@ -32,9 +32,9 @@ home.addEventListener("click", returnHome)
  */
 function startGame() {
     startButtonContainer.classList.add("hide")
-    // answerButton.classList.remove("hide")
-    // questionHeader.classList.remove("hide")
-    // extraButtonContainer.classList.remove("hide")
+    answerButton.classList.remove("hide")
+    questionHeader.classList.remove("hide")
+    extraButtonContainer.classList.remove("hide")
 
     displayQuestion()
 }
@@ -55,11 +55,9 @@ function displayQuestion() {
 function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
-        // document.getElementById(a.id).classList.add("btn-correct")
         alert("Well Done! :D")
     } else {
         alert("Wrong Answer :(")
-        // document.getElementById(a.id).classList.add("btn-wrong")
     }
 
 
