@@ -13,6 +13,8 @@ let btn = document.getElementsByClassName("btn")
 let home = document.getElementById("return-home")
 let quizDiv = document.getElementsByClassName("container-div")
 
+
+
 let i = 0
 let score = 0
 
@@ -21,9 +23,6 @@ startButton.addEventListener("click", startGame)
 next.addEventListener("click", displayNextQuestion)
 home.addEventListener("click", returnHome)
 
-next.addEventListener("click", function onClick(event){
-
-})
 
 
 /**
@@ -54,12 +53,12 @@ function displayQuestion() {
 function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML
-        document.getElementById(a.id).style.background = "green"
-        alert("Well played!")
+        // document.getElementById(a.id).classList.add("btn-correct")
     } else {
-        document.getElementById(a.id).style.background = "red"
-        alert("Better luck next time!")
+        // document.getElementById(a.id).classList.add("btn-wrong")
     }
+
+
     setTimeout(displayNextQuestion, 500)
 }
 /**
@@ -70,9 +69,8 @@ function displayNextQuestion() {
         i = i+1
         displayQuestion();
     } else {
-        scores.innerHTML = score + "/" + questionHolder.length;
-
-    }
+        scores.innerHTML = score + "/" + questionHolder.length
+      }
 }
 
 
