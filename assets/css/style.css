@@ -37,7 +37,7 @@ margin-bottom: 50px;
 
 /* structual styling for question/answer div*/
 
-.container-div {
+#container-div {
     display: flex;
     width: 800px;
     max-width: 80%;
@@ -142,7 +142,6 @@ box-shadow: 0 0 10px 3px black;
 /* Final page displaying scores */
 
 #final-page {
-    display: none;
     margin:auto;
     font-size: 200%;
     align-content: center;
@@ -162,6 +161,17 @@ box-shadow: 0 0 10px 3px black;
 }
 
 /* styling of the social media icons etc */
+.social-media {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 200%;
+}
+
+.social-media a {
+    color: black;
+    margin: 5%;
+}
 
 /* the class that makes everything disipears in the loading of the page */
 .hide {

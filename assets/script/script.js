@@ -11,7 +11,7 @@ let scoreDiv = document.getElementById("score-div")
 let btn = document.getElementsByClassName("btn")
 
 let home = document.getElementById("return-home")
-let quizDiv = document.getElementsByClassName("container-div")
+let quizDiv = document.getElementById("container-div")
 
 let finalPage = document.getElementById("final-page")
 
@@ -35,6 +35,7 @@ function startGame() {
     answerButton.classList.remove("hide")
     questionHeader.classList.remove("hide")
     extraButtonContainer.classList.remove("hide")
+
 
     displayQuestion()
 }
@@ -72,10 +73,11 @@ function displayNextQuestion() {
         displayQuestion();
     } else {
         scores.innerHTML = score + "/" + questionHolder.length
-        finalPage.style.display = "initial"
+        finalPage.classList.remove("hide")
         answerButton.classList.add("hide")
         questionHeader.classList.add("hide")
         extraButtonContainer.classList.add("hide")
+        quizDiv.style.display = "none"
       }
 }
 

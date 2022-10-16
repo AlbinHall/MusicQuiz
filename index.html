@@ -28,23 +28,13 @@
     </section>
 
 <!-- The quiz questions etc-->
-    <div class="container-div">
+    <div id="container-div">
         <h2 id="question" class="hide"></h2>
         <divs id="holdingButtons" class="btn-div hide">
            <button onclick="scoreCount(this)" id="btn1" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn2" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn3" class="btn"></button>
            <button onclick="scoreCount(this)" id="btn4" class="btn"></button>
-        </div>
-            <!-- the buttons for navigating the site-->
-        <div id="final-page">
-            <h2 id="title">
-                Thanks For Playing! <i class="fa-solid fa-face-laugh-beam"></i>
-            </h2>
-            <!--
-                Photo by <a href="https://unsplash.com/@simon_noh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Noh</a> on <a href="https://unsplash.com/s/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  -->
-            <img src="assets/image/music.jpg" alt="Picture of text saying no music no life ">
         </div>
     </div>
 
@@ -56,10 +46,29 @@
         </div>
     </section>    
 
+    <div id="final-page" class="hide">
+        <h2 id="title">
+            Thanks For Playing! <i class="fa-solid fa-face-laugh-beam"></i>
+        </h2>
+        <!--
+            Photo by <a href="https://unsplash.com/@simon_noh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Noh</a> on <a href="https://unsplash.com/s/photos/music?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+        <img src="assets/image/music.jpg" alt="Picture of text saying no music no life ">
+    </div>
+
 <!--social media maybe use-->
-    <footer class="social-media">
+    <footer id="footer" >
         <div>
-            social media
+            <p class="social-media">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" 
+            aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener" 
+            aria-label="Visit our twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" 
+            aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" 
+            aria-label="Visit our instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </p>
         </div>
     </footer>
     <script src="assets/script/script.js"></script>
