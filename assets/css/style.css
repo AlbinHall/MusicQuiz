@@ -24,6 +24,7 @@ h1, h2, h3 {
 .nav {
 margin: 50px;
 font-size: 30px;
+text-align: center;
 }
 
 .scores {
@@ -155,10 +156,14 @@ box-shadow: 0 0 10px 3px black;
     
     border: 1px solid black;
     background-color: whitesmoke;
-
-
+    border-radius: 10px;
 }
 
+#final-page img {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
 
 /* styling of the social media icons etc */
 
