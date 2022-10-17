@@ -204,5 +204,13 @@ a {
     display: none;
 }
 /* for phones and smaller screens */
-@media screen and (max-width: 950px)
-
+@media screen and (max-width: 950px) {
+    .btn {
+        border-radius: 10px;
+        border: none;
+        width: 200px;
+        height: 100px;
+        background-color: #f9bc60;
+        color: #001e1d;
+        } 
+}
