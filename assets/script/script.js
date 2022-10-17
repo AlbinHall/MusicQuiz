@@ -16,6 +16,10 @@ let quizDiv = document.getElementById("container-div")
 let finalPage = document.getElementById("final-page")
 let footer = document.getElementById("footer")
 
+let username = document.getElementById("username")
+
+let usernameArray = []
+
 
 
 let i = 0
@@ -25,6 +29,8 @@ let score = 0
 startButton.addEventListener("click", startGame)
 next.addEventListener("click", displayNextQuestion)
 home.addEventListener("click", returnHome)
+startButtonContainer.addEventListener('submit', usernames);
+
 
 
 
@@ -74,7 +80,7 @@ function displayNextQuestion() {
         i = i+1
         displayQuestion();
     } else {
-        scores.innerHTML = score + "/" + questionHolder.length
+        scores.innerHTML = usernameArray[0] + ": " + score + "/" + questionHolder.length
         finalPage.classList.remove("hide")
         answerButton.classList.add("hide")
         questionHeader.classList.add("hide")
@@ -82,6 +88,18 @@ function displayNextQuestion() {
         quizDiv.style.display = "none"
         footer.classList.remove("hide")
       }
+}
+
+function usernames(event) {
+    event.preventDefault(event)
+   
+    username = username.value
+    usernameArray.unshift(username)
+    startButtonContainer.submit(event); {
+        console.log(usernameArray);
+        alert("welcome " + usernameArray[0])
+        }
+
 }
 
 

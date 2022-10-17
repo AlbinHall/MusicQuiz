@@ -203,3 +203,6 @@ a {
 .hide {
     display: none;
 }
+/* for phones and smaller screens */
+@media screen and (max-width: 950px)
+
