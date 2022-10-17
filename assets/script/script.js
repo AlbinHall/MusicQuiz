@@ -80,7 +80,7 @@ function displayNextQuestion() {
         i = i+1
         displayQuestion();
     } else {
-        scores.innerHTML = usernameArray[0] + ": " + score + "/" + questionHolder.length
+        scores.innerHTML = usernameArray[0] + "'s score: " + score + "/" + questionHolder.length
         finalPage.classList.remove("hide")
         answerButton.classList.add("hide")
         questionHeader.classList.add("hide")
