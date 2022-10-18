@@ -46,7 +46,9 @@ function startGame() {
     displayQuestion();
 }
 
-
+/**
+ * this function displayes the question that is seen in the game.
+ */
 function displayQuestion() {
         questionHeader.innerHTML= "Question " + (i+1) + "<br />" + questionHolder[i].question;
         button1.innerHTML = questionHolder[i].option[0];
@@ -88,6 +90,9 @@ function displayNextQuestion() {
       };
 }
 
+/**
+ * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array
+ */
 function usernames(event) {
     event.preventDefault(event);
    
@@ -100,7 +105,9 @@ function usernames(event) {
 
 }
 
-
+/**
+ * this function is connected to the home button and it relods the page so that the user starts over
+ */
 function returnHome() {
     location.reload();
 }
