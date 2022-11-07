@@ -65,8 +65,6 @@ startButton.addEventListener("click", startGame);
 next.addEventListener("click", displayNextQuestion);
 home.addEventListener("click", returnHome);
 startButtonContainer.addEventListener('submit', usernames);
-allButtons.forEach(button => button).addEventListener("click", scoreCount)
-
 
 /**
  * makes so that the sign up goes away and starts the quiz
@@ -95,19 +93,17 @@ function displayQuestion() {
 }
 
 /**
- * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount() {
-    if (allButtons.forEach(button => button.innerHTML) === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+function scoreCount(a) {
+    if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML;
-        allButtons.forEach(button => button.style.backgroundColor = "green")
+        a.style.backgroundColor = "green"
     } else {
         a.style.backgroundColor = "Red"
-        allButtons.forEach(button => button.style.backgroundColor = "red")
     };
 
-    setTimeout(displayNextQuestion, 500)
+    setTimeout(displayNextQuestion, 400)
 }
 
 
@@ -131,7 +127,10 @@ function displayNextQuestion() {
 
 }
 
-/**returns the color of the button to the original color */
+/**
+ * returns the color of the button to the original color
+ * (got help with the query Selector instead of if else statements by tutor)
+ */
 function returnOriginalColor() {
     allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60")
 }
