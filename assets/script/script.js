@@ -21,37 +21,37 @@ let allButtons = document.getElementsByClassName("btn")
 let usernameArray = [];
 
 
-//The quuestions for the quiz
+//The questions for the quiz
 let questionHolder = [{
-    question : "Who was the lead singer of Nirvana?",
-    option : ["Kurt Cobain", "Mick Jagger", "Lionel Richie", "Dave Grohl"],
-    answer : "Kurt Cobain"
-},
-{
-    question : "What was the name of the band that made the song 'Sweet Home Alabama'?",
-    option : ["The Rolling Stones", "Herman's Hermits", "Lynyrd Skynyrd", "U2"],
-    answer : "Lynyrd Skynyrd"
-},
-{
-    question : "Who produced the legendary album called 'Abbey Road' made by The Beatles?",
-    option : ["John Lennon", "Phil Spector ", "Paul Mccartney", "George Martin"],
-    answer : "George Martin"
-},
-{
-    question : "In which movie is 'Where is my mind' by Pixies played?",
-    option : ["Fight Club", "Saving private Ryan", "lock stock and two smoking barrels", "Snatch"],
-    answer : "Fight Club"
-},
-{
-    question : "In which year did the album 'By the way' made by RHCP got released? ",
-    option : ["1998", "2010", "2002", "1994"],
-    answer : "2002"
-},
-{
-    question : "Where did Ringo Starr from The beatles grow up?",
-    option : ["London", "Glasgow", "Manchester", "Liverpool"],
-    answer : "Liverpool"
-}
+        question: "Who was the lead singer of Nirvana?",
+        option: ["Kurt Cobain", "Mick Jagger", "Lionel Richie", "Dave Grohl"],
+        answer: "Kurt Cobain"
+    },
+    {
+        question: "What was the name of the band that made the song 'Sweet Home Alabama'?",
+        option: ["The Rolling Stones", "Herman's Hermits", "Lynyrd Skynyrd", "U2"],
+        answer: "Lynyrd Skynyrd"
+    },
+    {
+        question: "Who produced the legendary album called 'Abbey Road' made by The Beatles?",
+        option: ["John Lennon", "Phil Spector ", "Paul Mccartney", "George Martin"],
+        answer: "George Martin"
+    },
+    {
+        question: "In which movie is 'Where is my mind' by Pixies played?",
+        option: ["Fight Club", "Saving private Ryan", "lock stock and two smoking barrels", "Snatch"],
+        answer: "Fight Club"
+    },
+    {
+        question: "In which year did the album 'By the way' made by RHCP got released? ",
+        option: ["1998", "2010", "2002", "1994"],
+        answer: "2002"
+    },
+    {
+        question: "Where did Ringo Starr from The beatles grow up?",
+        option: ["London", "Glasgow", "Manchester", "Liverpool"],
+        answer: "Liverpool"
+    }
 ];
 
 let button1 = document.getElementById("btn1");
@@ -87,11 +87,11 @@ function startGame() {
  * this function displayes the question that is seen in the game.
  */
 function displayQuestion() {
-        questionHeader.innerHTML= "Question " + (i+1) + "<br />" + questionHolder[i].question;
-        button1.innerHTML = questionHolder[i].option[0];
-        button2.innerHTML = questionHolder[i].option[1];
-        button3.innerHTML = questionHolder[i].option[2];
-        button4.innerHTML = questionHolder[i].option[3];
+    questionHeader.innerHTML = "Question " + (i + 1) + "<br />" + questionHolder[i].question;
+    button1.innerHTML = questionHolder[i].option[0];
+    button2.innerHTML = questionHolder[i].option[1];
+    button3.innerHTML = questionHolder[i].option[2];
+    button4.innerHTML = questionHolder[i].option[3];
 
 }
 
@@ -99,40 +99,34 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
- function scoreCount() {
-    if (button1.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
-        scores.innerHTML = ++scores.innerHTML;
-        button1.innerHTML = button1.classList.add("rightAnswer")
-        alert("Well Done! :D");
-    } else {
-        alert("Wrong Answer :(");
-    };
-
-    setTimeout(displayNextQuestion(), 300)
-}
-
-
-/**function scoreCount(a) {
+function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML;
-        alert("Well Done! :D");
-        a.innerHTML = a.add.classList(rightAnswer)
+        a.style.backgroundColor = "Green"
     } else {
-        alert("Wrong Answer :(");
+        a.style.backgroundColor = "Red"
     };
 
-    displayNextQuestion()
+    setTimeout(displayNextQuestion, 500)
 }
-*/
 
-
+function returnOriginalColor() {
+    for (i = 0; i < allButtons.length; i++) {
+        if (allButtons[i].style.backgroundColor = "Green") {
+            allButtons[i].style.backgroundColor = "#f9bc60"
+        } else if (allButtons[i].style.backgroundColor = "red") {
+            allButtons[i].style.backgroundColor = "#f9bc60"
+        } 
+    };
+}
 /**
  * takes you to the next question and displays final page at the end
  */
 function displayNextQuestion() {
-    if (i < questionHolder.length -1) {
-        i = i+1;
+    if (i < questionHolder.length - 1) {
+        i = i + 1;
         displayQuestion();
+        //returnOriginalColor();
     } else {
         scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
         finalPage.classList.remove("hide");
@@ -141,7 +135,7 @@ function displayNextQuestion() {
         extraButtonContainer.classList.add("hide");
         quizDiv.style.display = "none";
         footer.classList.remove("hide");
-      };
+    };
 }
 
 /**
@@ -149,14 +143,14 @@ function displayNextQuestion() {
  */
 function usernames(event) {
     event.preventDefault(event);
-   
+
     username = username.value;
     usernameArray.unshift(username);
     startButtonContainer.submit(event); {
         console.log(usernameArray);
         alert("welcome " + usernameArray[0])
         startGame()
-        };
+    };
 
 }
 

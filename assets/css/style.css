@@ -17,15 +17,6 @@ body {
 }
 
 
-.rightAnswer {
-    background-color: green;
-}
-
-.wrongAnswer {
-    background-color: red;
-}
-
-
 h1,
 h2,
 h3 {
@@ -221,7 +212,14 @@ a {
 .hide {
     display: none;
 }
+/*Right or wrong color change for Answer buttons*/
+.rightAnswer {
+    background-color: green;
+}
 
+.wrongAnswer {
+    background-color: red;
+}
 /* for smaller screens */
 @media screen and (max-width: 950px) {
 
