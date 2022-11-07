@@ -110,15 +110,7 @@ function scoreCount(a) {
     setTimeout(displayNextQuestion, 500)
 }
 
-function returnOriginalColor() {
-    for (i = 0; i < allButtons.length; i++) {
-        if (allButtons[i].style.backgroundColor = "Green") {
-            allButtons[i].style.backgroundColor = "#f9bc60"
-        } else if (allButtons[i].style.backgroundColor = "red") {
-            allButtons[i].style.backgroundColor = "#f9bc60"
-        } 
-    };
-}
+
 /**
  * takes you to the next question and displays final page at the end
  */
@@ -126,7 +118,7 @@ function displayNextQuestion() {
     if (i < questionHolder.length - 1) {
         i = i + 1;
         displayQuestion();
-        //returnOriginalColor();
+        returnOriginalColor()
     } else {
         scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
         finalPage.classList.remove("hide");
@@ -136,7 +128,23 @@ function displayNextQuestion() {
         quizDiv.style.display = "none";
         footer.classList.remove("hide");
     };
+
+    //returnOriginalColor();
 }
+
+/**returns the color of the button to the original color */
+function returnOriginalColor() {
+    if (button1.style.backgroundColor != "#f9bc60" ) {
+        button1.style.backgroundColor = "#f9bc60"
+    } else if (button2.style.backgroundColor != "#f9bc60") {
+        button2.style.backgroundColor = "#f9bc60"
+    } else if (button3.style.backgroundColor != "#f9bc60") {
+        button3.style.backgroundColor = "#f9bc60"
+    } else if (button4.style.backgroundColor != "#f9bc60") {
+        button4.style.backgroundColor = "#f9bc60"
+    };
+}
+
 
 /**
  * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array. Similar to Code Institute challenge
