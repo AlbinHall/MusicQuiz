@@ -16,119 +16,12 @@ let footer = document.getElementById("footer");
 
 let username = document.getElementById("username");
 
+let allButtons = document.getElementsByClassName("btn")
+
 let usernameArray = [];
 
 
-
-let i = 0;
-let score = 0;
-
-
-startButton.addEventListener("click", startGame);
-next.addEventListener("click", displayNextQuestion);
-home.addEventListener("click", returnHome);
-startButtonContainer.addEventListener('submit', usernames);
-
-
-
-
-/**
- * makes so that the sign up goes away and starts the quiz
- */
-function startGame() {
-    startButtonContainer.classList.add("hide");
-    answerButton.classList.remove("hide");
-    questionHeader.classList.remove("hide");
-    extraButtonContainer.classList.remove("hide");
-    footer.classList.add("hide");
-
-
-    displayQuestion();
-}
-
-/**
- * this function displayes the question that is seen in the game.
- */
-function displayQuestion() {
-        questionHeader.innerHTML= "Question " + (i+1) + "<br />" + questionHolder[i].question;
-        button1.innerHTML = questionHolder[i].option[0];
-        button2.innerHTML = questionHolder[i].option[1];
-        button3.innerHTML = questionHolder[i].option[2];
-        button4.innerHTML = questionHolder[i].option[3];
-}
-
-/**
- * 
- * score counter and declairs backgroundcolor of button
- */
-
-function accesingAnswer() {
-    if (questionHolder[i].option[i] === questionHolder[i].answer) {
-        scores.value = ++scores.value
-        alert("correct")
-    }else {
-        alert("wrong")
-    }
-}
-
-
-/** function scoreCount(a) {
-    if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
-        scores.innerHTML = ++scores.innerHTML;
-        alert("Well Done! :D");
-    } else {
-        alert("Wrong Answer :(");
-    };
-
-
-    setTimeout(displayNextQuestion, 200);
-}
-*/
-
-
-/**
- * takes you to the next question and displays final page at the end
- */
-function displayNextQuestion() {
-    if (i < questionHolder.length -1) {
-        i = i+1;
-        displayQuestion();
-    } else {
-        scores.innerHTML = usernameArray[0] + "'s score: " + score + "/" + questionHolder.length;
-        finalPage.classList.remove("hide");
-        answerButton.classList.add("hide");
-        questionHeader.classList.add("hide");
-        extraButtonContainer.classList.add("hide");
-        quizDiv.style.display = "none";
-        footer.classList.remove("hide");
-      };
-}
-
-/**
- * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array
- */
-function usernames(event) {
-    event.preventDefault(event);
-   
-    username = username.value;
-    usernameArray.unshift(username);
-    startButtonContainer.submit(event); {
-        console.log(usernameArray);
-        alert("welcome " + usernameArray[0])
-        startGame()
-        };
-
-}
-
-/**
- * this function is connected to the home button and it relods the page so that the user starts over
- */
-function returnHome() {
-    location.reload();
-}
-
-
-// The questions, answer options and the correct answer for the quiz.
+//The quuestions for the quiz
 let questionHolder = [{
     question : "Who was the lead singer of Nirvana?",
     option : ["Kurt Cobain", "Mick Jagger", "Lionel Richie", "Dave Grohl"],
@@ -165,3 +58,111 @@ let button1 = document.getElementById("btn1");
 let button2 = document.getElementById("btn2");
 let button3 = document.getElementById("btn3");
 let button4 = document.getElementById("btn4");
+
+let i = 0;
+
+startButton.addEventListener("click", startGame);
+next.addEventListener("click", displayNextQuestion);
+home.addEventListener("click", returnHome);
+startButtonContainer.addEventListener('submit', usernames);
+
+
+
+
+/**
+ * makes so that the sign up goes away and starts the quiz
+ */
+function startGame() {
+    startButtonContainer.classList.add("hide");
+    answerButton.classList.remove("hide");
+    questionHeader.classList.remove("hide");
+    extraButtonContainer.classList.remove("hide");
+    footer.classList.add("hide");
+
+
+    displayQuestion();
+}
+
+/**
+ * this function displayes the question that is seen in the game.
+ */
+function displayQuestion() {
+        questionHeader.innerHTML= "Question " + (i+1) + "<br />" + questionHolder[i].question;
+        button1.innerHTML = questionHolder[i].option[0];
+        button2.innerHTML = questionHolder[i].option[1];
+        button3.innerHTML = questionHolder[i].option[2];
+        button4.innerHTML = questionHolder[i].option[3];
+
+}
+
+/**
+ * 
+ * score counter and declairs backgroundcolor of button
+ */
+ function scoreCount() {
+    if (button1.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+        scores.innerHTML = ++scores.innerHTML;
+        button1.innerHTML = button1.classList.add("rightAnswer")
+        alert("Well Done! :D");
+    } else {
+        alert("Wrong Answer :(");
+    };
+
+    setTimeout(displayNextQuestion(), 300)
+}
+
+
+/**function scoreCount(a) {
+    if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+        scores.innerHTML = ++scores.innerHTML;
+        alert("Well Done! :D");
+        a.innerHTML = a.add.classList(rightAnswer)
+    } else {
+        alert("Wrong Answer :(");
+    };
+
+    displayNextQuestion()
+}
+*/
+
+
+/**
+ * takes you to the next question and displays final page at the end
+ */
+function displayNextQuestion() {
+    if (i < questionHolder.length -1) {
+        i = i+1;
+        displayQuestion();
+    } else {
+        scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
+        finalPage.classList.remove("hide");
+        answerButton.classList.add("hide");
+        questionHeader.classList.add("hide");
+        extraButtonContainer.classList.add("hide");
+        quizDiv.style.display = "none";
+        footer.classList.remove("hide");
+      };
+}
+
+/**
+ * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array. Similar to Code Institute challenge
+ */
+function usernames(event) {
+    event.preventDefault(event);
+   
+    username = username.value;
+    usernameArray.unshift(username);
+    startButtonContainer.submit(event); {
+        console.log(usernameArray);
+        alert("welcome " + usernameArray[0])
+        startGame()
+        };
+
+}
+
+/**
+ * this function is connected to the home button and it relods the page so that the user starts over
+ */
+function returnHome() {
+    location.reload();
+}
