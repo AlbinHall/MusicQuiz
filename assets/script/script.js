@@ -16,7 +16,7 @@ let footer = document.getElementById("footer");
 
 let username = document.getElementById("username");
 
-let allButtons = document.getElementsByClassName("btn")
+let allButtons = document.querySelectorAll(".btn")
 
 let usernameArray = [];
 
@@ -65,8 +65,7 @@ startButton.addEventListener("click", startGame);
 next.addEventListener("click", displayNextQuestion);
 home.addEventListener("click", returnHome);
 startButtonContainer.addEventListener('submit', usernames);
-
-
+allButtons.forEach(button => button).addEventListener("click", scoreCount)
 
 
 /**
@@ -99,12 +98,13 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount(a) {
-    if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
+function scoreCount() {
+    if (allButtons.forEach(button => button.innerHTML) === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML;
-        a.style.backgroundColor = "Green"
+        allButtons.forEach(button => button.style.backgroundColor = "green")
     } else {
         a.style.backgroundColor = "Red"
+        allButtons.forEach(button => button.style.backgroundColor = "red")
     };
 
     setTimeout(displayNextQuestion, 500)
@@ -129,20 +129,11 @@ function displayNextQuestion() {
         footer.classList.remove("hide");
     };
 
-    //returnOriginalColor();
 }
 
 /**returns the color of the button to the original color */
 function returnOriginalColor() {
-    if (button1.style.backgroundColor != "#f9bc60" ) {
-        button1.style.backgroundColor = "#f9bc60"
-    } else if (button2.style.backgroundColor != "#f9bc60") {
-        button2.style.backgroundColor = "#f9bc60"
-    } else if (button3.style.backgroundColor != "#f9bc60") {
-        button3.style.backgroundColor = "#f9bc60"
-    } else if (button4.style.backgroundColor != "#f9bc60") {
-        button4.style.backgroundColor = "#f9bc60"
-    };
+    allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60")
 }
 
 

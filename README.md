@@ -51,7 +51,6 @@ The sites goal is to be a fun and easy accesable quiz.
 
 ![the colors i used for this site](assets/image/colors.png)
 
-
 ## testing of site 
 
 ### This site has been tested and verified via:
@@ -76,5 +75,11 @@ The sites goal is to be a fun and easy accesable quiz.
 ## Deployment 
 The site was deployd through Github pages 
 - [Link to the site ](https://albinhall.github.io/MusicQuiz/)
+
+### steps taken for deployment
+- etcetc
+- etcetc
+- etcetc
+- etcetc
 
 
