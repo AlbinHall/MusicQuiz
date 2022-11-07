@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body id="initial">
     <header>
         <nav class="nav">
@@ -15,31 +17,31 @@
         </nav>
     </header>
 
-<!-- The score for the quiz-->
+    <!-- The score for the quiz-->
     <div id="score-div">
         <p class="scores"><span id="score">0</span></p>
     </div>
 
 
 
-<!-- The quiz questions etc-->
+    <!-- The quiz questions etc-->
     <div id="container-div">
         <h2 id="question" class="hide"></h2>
 
-                <!-- The log in form for the username-->
-                <form id="start-btn" action="https://formdump.codeinstitute.net/" method="POST">
-                <div>
-                    <label for="username"></label>
-                    <input type="text" name="username" id="username" placeholder="Username Here!">
-                    <button type="submit" id="start-button">Press To Start!</button>
-                </div>
-                </form>
-                <!-- Holding answer buttons -->
+        <!-- The log in form for the username-->
+        <form id="start-btn" action="#">
+            <div>
+                <label for="username"></label>
+                <input type="text" name="username" id="username" placeholder="Username Here!">
+                <button type="submit" id="start-button">Press To Start!</button>
+            </div>
+        </form>
+        <!-- Holding answer buttons -->
         <div id="holdingButtons" class="btn-div hide">
-           <button onclick="scoreCount(this)" id="btn1" class="btn"></button>
-           <button onclick="scoreCount(this)" id="btn2" class="btn"></button>
-           <button onclick="scoreCount(this)" id="btn3" class="btn"></button>
-           <button onclick="scoreCount(this)" id="btn4" class="btn"></button>
+            <button onclick="scoreCount(this)" id="btn1" class="btn"></button>
+            <button onclick="scoreCount(this)" id="btn2" class="btn"></button>
+            <button onclick="scoreCount(this)" id="btn3" class="btn"></button>
+            <button onclick="scoreCount(this)" id="btn4" class="btn"></button>
         </div>
     </div>
 
@@ -49,7 +51,7 @@
             <button id="next">Next</button>
             <button id="return-home"><i class="fa-solid fa-house"></i></button>
         </div>
-    </section>    
+    </section>
 
     <div id="final-page" class="hide">
         <h2 id="title">
@@ -61,23 +63,25 @@
         <img src="assets/image/music.jpg" alt="Picture of text saying no music no life ">
     </div>
 
-<!--social media maybe use-->
-    <footer id="footer" >
+    <!--social media maybe use-->
+    <footer id="footer">
         <div>
             <p id="footer-style">
-            <a id="a1" href="https://www.facebook.com" target="_blank" rel="noopener" 
-            aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
-            <a id="a2" href="https://www.twitter.com" target="_blank" rel="noopener" 
-            aria-label="Visit our twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
-            <a id="a3" href="https://www.youtube.com" target="_blank" rel="noopener" 
-            aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
-            <a id="a4" href="https://www.instagram.com" target="_blank" rel="noopener" 
-            aria-label="Visit our instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-        </p>
+                <a id="a1" href="https://www.facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+                <a id="a2" href="https://www.twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+                <a id="a3" href="https://www.youtube.com" target="_blank" rel="noopener"
+                    aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+                <a id="a4" href="https://www.instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </p>
         </div>
     </footer>
+
     <script src="assets/script/script.js"></script>
     <script src="https://kit.fontawesome.com/a07493030b.js" crossorigin="anonymous"></script>
-
 </body>
+
 </html>

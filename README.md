@@ -65,9 +65,13 @@ The sites goal is to be a fun and easy accesable quiz.
 
 ## bugs 
 - problem with that the function that was making the buttons go green or red depending on correct or wrong answer not disapering when a new question is displayed
+- score not working correctly
+- sends user away from site when submiting username
 
 ## solved bug / not solved bug
 - I spend a lot of time trying to figure out the right syntax but gave up because I could not justify the time
+- fixed username problem by changing the the method and action of the form in html
+
 
 ## Deployment 
 The site was deployd through Github pages 

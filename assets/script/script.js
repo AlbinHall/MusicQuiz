@@ -61,7 +61,18 @@ function displayQuestion() {
  * 
  * score counter and declairs backgroundcolor of button
  */
-function scoreCount(a) {
+
+function accesingAnswer() {
+    if (questionHolder[i].option[i] === questionHolder[i].answer) {
+        scores.value = ++scores.value
+        alert("correct")
+    }else {
+        alert("wrong")
+    }
+}
+
+
+/** function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML;
         alert("Well Done! :D");
@@ -72,6 +83,9 @@ function scoreCount(a) {
 
     setTimeout(displayNextQuestion, 200);
 }
+*/
+
+
 /**
  * takes you to the next question and displays final page at the end
  */
@@ -101,6 +115,7 @@ function usernames(event) {
     startButtonContainer.submit(event); {
         console.log(usernameArray);
         alert("welcome " + usernameArray[0])
+        startGame()
         };
 
 }
