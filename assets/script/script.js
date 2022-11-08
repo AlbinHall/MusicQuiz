@@ -92,7 +92,6 @@ function startGame() {
     extraButtonContainer.classList.remove("hide");
     footer.classList.add("hide");
 
-
     displayQuestion();
 }
 
@@ -120,7 +119,7 @@ function scoreCount(a) {
     } else {
         a.style.backgroundColor = "Red"
     };
-
+    
     setTimeout(displayNextQuestion, 400)
 }
 

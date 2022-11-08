@@ -80,7 +80,6 @@ h3 {
     color: #001e1d;
 }
 
-
 #start-button {
     width: 50%;
     height: 100px;
@@ -96,9 +95,6 @@ h3 {
 #start-button:hover {
     box-shadow: 0 0 10px;
 }
-
-
-
 
 /* styling for buttons and button container */
 
@@ -123,7 +119,6 @@ h3 {
 .btn:hover {
     box-shadow: 0 0 10px 3px black;
 }
-
 
 /* the displayd question styling */
 
@@ -221,11 +216,10 @@ a {
 
     @media screen and (max-width: 500px) {
 
-
         .btn {
             border-radius: 10px;
             border: none;
-            width: 100%;
+            width: 100px;
             height: 100px;
             background-color: #f9bc60;
             color: #001e1d;
