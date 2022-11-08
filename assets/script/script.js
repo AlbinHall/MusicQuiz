@@ -54,6 +54,7 @@ let questionHolder = [{
     }
 ];
 
+
 let button1 = document.getElementById("btn1");
 let button2 = document.getElementById("btn2");
 let button3 = document.getElementById("btn3");
@@ -61,10 +62,25 @@ let button4 = document.getElementById("btn4");
 
 let i = 0;
 
-startButton.addEventListener("click", startGame);
 next.addEventListener("click", displayNextQuestion);
 home.addEventListener("click", returnHome);
 startButtonContainer.addEventListener('submit', usernames);
+
+
+/**
+ * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array.
+ * Similar to the code written by code institute in the challenge
+ * Form Submission Challenge
+ * https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/
+ */
+ function usernames(event) {
+    event.preventDefault();
+
+    username = username.value;
+    usernameArray.unshift(username);
+    startGame()
+}
+
 
 /**
  * makes so that the sign up goes away and starts the quiz
@@ -80,6 +96,7 @@ function startGame() {
     displayQuestion();
 }
 
+
 /**
  * this function displayes the question that is seen in the game.
  */
@@ -91,6 +108,7 @@ function displayQuestion() {
     button4.innerHTML = questionHolder[i].option[3];
 
 }
+
 
 /**
  * score counter and declairs backgroundcolor of button
@@ -127,6 +145,7 @@ function displayNextQuestion() {
 
 }
 
+
 /**
  * returns the color of the button to the original color
  * (got help with the query Selector instead of if else statements by tutor)
@@ -135,22 +154,6 @@ function returnOriginalColor() {
     allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60")
 }
 
-
-/**
- * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array. Similar to Code Institute challenge
- */
-function usernames(event) {
-    event.preventDefault(event);
-
-    username = username.value;
-    usernameArray.unshift(username);
-    startButtonContainer.submit(event); {
-        console.log(usernameArray);
-        alert("welcome " + usernameArray[0])
-        startGame()
-    };
-
-}
 
 /**
  * this function is connected to the home button and it relods the page so that the user starts over

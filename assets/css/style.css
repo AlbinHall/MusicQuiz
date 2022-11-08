@@ -201,25 +201,12 @@ a {
     margin: 5%;
 }
 
-#a1:hover,
-#a2:hover,
-#a3:hover,
-#a4:hover {
-    font-size: 300%;
-}
 
 /* the class that makes everything disipears in the loading of the page */
 .hide {
     display: none;
 }
-/*Right or wrong color change for Answer buttons*/
-.rightAnswer {
-    background-color: green;
-}
 
-.wrongAnswer {
-    background-color: red;
-}
 /* for smaller screens */
 @media screen and (max-width: 950px) {
 
@@ -254,7 +241,7 @@ a {
         #extra-buttons {
             display: grid;
             grid-auto-flow: column;
-            width: fit-content;
+            /* width: fit-content; */
             justify-items: center;
             margin: auto;
 
