@@ -94,4 +94,18 @@ The site was deployd through Github pages
 - In GitHub settings I navigated to the pages section
 - Via Pages I uploaded the file via the Master Branch and then waited for the site to be deployed
 
+## Credits
+
+### Media credits
+- The pictures displayed in the readme.md file was taken by me
+- The picture on the final page is from unsplash
+    - [link to the site](https://unsplash.com/@simon_noh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    - credit: Simon Noh
+
+### Credits to code
+- Inspiration on how to start of the code was taken from Ahmed
+    - [Link to the repository](https://github.com/Ahmad528/quizApp/tree/main/quizwuiz)
+- Got help from code institute tutor with a more straight forward es6 code in the returnOriginalColor function
+
+![The returnOriginalColor function](assets/image/tutorHelp.png)
 
