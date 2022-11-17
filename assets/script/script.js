@@ -76,9 +76,14 @@ startButtonContainer.addEventListener('submit', usernames);
  function usernames(event) {
     event.preventDefault();
 
-    username = username.value;
-    usernameArray.unshift(username);
-    startGame()
+    //username = username.value;
+
+    if (username.value === "" || username.value === " ") {
+        alert("Please Fill In A valid Username")
+    } else {
+        usernameArray.unshift(username.value)
+        startGame()
+    }
 }
 
 
@@ -131,15 +136,15 @@ function displayNextQuestion() {
     if (i < questionHolder.length - 1) {
         i = i + 1;
         displayQuestion();
-        returnOriginalColor()
+        returnOriginalColor();
     } else {
         scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
         finalPage.classList.remove("hide");
         answerButton.classList.add("hide");
         questionHeader.classList.add("hide");
-        extraButtonContainer.classList.add("hide");
         quizDiv.style.display = "none";
         footer.classList.remove("hide");
+        next.classList.add("hide");
     };
 
 }
@@ -150,7 +155,7 @@ function displayNextQuestion() {
  * (got help with the query Selector instead of if else statements by tutor)
  */
 function returnOriginalColor() {
-    allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60")
+    allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60");
 }
 
 

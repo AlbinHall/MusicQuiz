@@ -150,6 +150,11 @@ h3 {
     color: #001e1d;
 }
 
+.home-last {
+    width: 400px;
+    
+}
+
 /* more in depth styling with colors etc will be made */
 #next:hover,
 #return-home:hover {
