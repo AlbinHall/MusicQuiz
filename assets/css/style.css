@@ -59,6 +59,11 @@ h3 {
 
 /* styling for the sign up username etc */
 
+#login-header {
+    color: #001e1d;
+    font-size: 200%;
+}
+
 #start-btn {
     margin-top: 200px;
     position: absolute;
@@ -150,10 +155,6 @@ h3 {
     color: #001e1d;
 }
 
-.home-last {
-    width: 400px;
-    
-}
 
 /* more in depth styling with colors etc will be made */
 #next:hover,

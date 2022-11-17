@@ -75,14 +75,16 @@ startButtonContainer.addEventListener('submit', usernames);
  */
  function usernames(event) {
     event.preventDefault();
+    loginHeader = document.getElementById("login-header")
 
-    //username = username.value;
 
     if (username.value === "" || username.value === " ") {
-        alert("Please Fill In A valid Username")
+        //alert("Please Fill In A valid Username")
+        loginHeader.innerHTML = "Please Enter A Valid Username"
     } else {
+        loginHeader.innerHTML = "Welcome: " + username.value + "!"
         usernameArray.unshift(username.value)
-        startGame()
+        setTimeout(startGame, 600)
     }
 }
 
