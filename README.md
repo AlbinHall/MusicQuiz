@@ -1,13 +1,13 @@
 # Welcome to my Music Quiz project
 
-## This project is my first one using JavaScript with HTML and CSS combined. The site have 6 questions with score count and alert when correct or wrong answer. The site also logs username and push it into an array that displays in the beginning and at the final page.
+ This project is my first one using JavaScript with HTML and CSS combined. The site have 6 questions with score count and visual feedback if answer is correct or wrong. The site also logs username and push it into an array that displays in the beginning and at the final page.
 
-The sites goal is to be a fun and easy accesable quiz.
+The sites goal is to be a fun and easy accesable quiz. And for me to learn more about JavaScript, HTML and CSS.
 
 ## The site on different screen sizes:
 ![displayes the sites on different screen sizes](assets/image/responsive.png)
 
-##features 
+## features 
 
 ### Navigation
 - The navigation is located below the quiz form
@@ -28,7 +28,7 @@ The sites goal is to be a fun and easy accesable quiz.
 - The form is JavaScript interactive so that the usersname logs and is then pushed into and array with usernames
 - The username gives the game an added seriousness so that you feel as if you played the game non anonymous
 
-![picture displaying the login form and start button](assets/image/startForm.png)
+![picture displaying the login form and start button](assets/image/startPage.png)
 
 
 ## The Game 
@@ -54,22 +54,35 @@ The sites goal is to be a fun and easy accesable quiz.
 ## testing of site 
 
 ### This site has been tested and verified via:
-- The jigsaw CSS validator 
-- The W3 HTML validator
+- CSS
+    - The jigsaw CSS validator 
+- HTML
+    - The W3 HTML validator
+- JavaScript validated through Jshint Validator
+    - The metrics delivered from the Jshint:
+        - There are 8 functions in this file.
+        - Function with the largest signature take 1 arguments, while the median is 0.
+        - Largest function has 11 statements in it, while the median is 5.
+        - The most complex function has a cyclomatic complexity value of 3 while the median is 1.
 - Lighthouse accessibility
-- Jshint validator
+    - Result from test displayed in picture below
 
 ![The lighthouse accessibility validatin](assets/image/lighthouse.png)
 
+### Manually Tested
+The site has been manually tested by me during the building of the site and also the final version
 
 ## bugs 
-- problem with that the function that was making the buttons go green or red depending on correct or wrong answer not disapering when a new question is displayed
+- Bug that makes the color changing of the buttons not disapear 
 - score not working correctly
 - sends user away from site when submiting username
+- validation problem for signup
 
 ## solved bug / not solved bug
-- I spend a lot of time trying to figure out the right syntax but gave up because I could not justify the time
-- fixed username problem by changing the the method and action of the form in html
+- Problem with color display when correct/wrong answer is fixed
+- Fixed username problem by changing the the method and action of the form in html
+- Bug solved with the displaying of score
+- validation for signup fixed
 
 
 ## Deployment 
@@ -77,9 +90,8 @@ The site was deployd through Github pages
 - [Link to the site ](https://albinhall.github.io/MusicQuiz/)
 
 ### steps taken for deployment
-- etcetc
-- etcetc
-- etcetc
-- etcetc
+- In GitHub repositorys I navigeted to the setting section
+- In GitHub settings I navigated to the pages section
+- Via Pages I uploaded the file via the Master Branch and then waited for the site to be deployed
 
 
