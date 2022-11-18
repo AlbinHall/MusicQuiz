@@ -68,18 +68,15 @@ startButtonContainer.addEventListener('submit', usernames);
 
 
 /**
- * this function collects the username thats dilivered to the sigup form, it then pushes the name into an array.
- * Similar to the code written by code institute in the challenge
- * Form Submission Challenge
- * https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/
+ * This function collects the username thats dilivered to the sigup form.
+ * It then pushes the name into an array.
+ * The function also validates input
  */
  function usernames(event) {
     event.preventDefault();
     loginHeader = document.getElementById("login-header")
 
-
     if (username.value === "" || username.value === " ") {
-        //alert("Please Fill In A valid Username")
         loginHeader.innerHTML = "Please Enter A Valid Username"
     } else {
         loginHeader.innerHTML = "Welcome: " + username.value + "!"
@@ -154,7 +151,6 @@ function displayNextQuestion() {
 
 /**
  * returns the color of the button to the original color
- * (got help with the query Selector instead of if else statements by tutor)
  */
 function returnOriginalColor() {
     allButtons.forEach(allButton => allButton.style.backgroundColor = "#f9bc60");
