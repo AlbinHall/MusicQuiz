@@ -72,12 +72,12 @@ startButtonContainer.addEventListener('submit', usernames);
  * It then pushes the name into an array.
  * The function also validates input
  */
- function usernames(event) {
+function usernames(event) {
     event.preventDefault();
     loginHeader = document.getElementById("login-header")
 
-    if (username.value === "" || username.value === " ") {
-        loginHeader.innerHTML = "Please Enter A Valid Username"
+    if (username.value.length < 3 || username.value.trim() == "") {
+        loginHeader.innerHTML = "Please Enter A Valid Username longer than 2 characters"
     } else {
         loginHeader.innerHTML = "Welcome: " + username.value + "!"
         usernameArray.unshift(username.value)
@@ -118,12 +118,14 @@ function displayQuestion() {
  */
 function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
-        scores.innerHTML = ++scores.innerHTML;
+        scores.innerHTML = ++scores.innerHTML +  usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
+
         a.style.backgroundColor = "green"
     } else {
         a.style.backgroundColor = "Red"
     };
-    
+
+    allButtons.forEach(allButton => allButton.disable = true)
     setTimeout(displayNextQuestion, 400)
 }
 
@@ -137,7 +139,7 @@ function displayNextQuestion() {
         displayQuestion();
         returnOriginalColor();
     } else {
-        scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
+        //scores.innerHTML = usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
         finalPage.classList.remove("hide");
         answerButton.classList.add("hide");
         questionHeader.classList.add("hide");
