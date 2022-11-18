@@ -51,7 +51,7 @@ The sites goal is to be a fun and easy accesable quiz. And for me to learn more 
 
 ![the colors i used for this site](assets/image/colors.png)
 
-## testing of site 
+## testing of site and bugs
 
 ### This site has been tested and verified via:
 - CSS
@@ -72,18 +72,17 @@ The sites goal is to be a fun and easy accesable quiz. And for me to learn more 
 ### Manually Tested
 The site has been manually tested by me during the building of the site and also the final version
 
-## bugs 
+### bugs 
 - Bug that makes the color changing of the buttons not disapear 
 - score not working correctly
 - sends user away from site when submiting username
 - validation problem for signup
 
-## solved bug / not solved bug
+### solved bug / not solved bug
 - Problem with color display when correct/wrong answer is fixed
 - Fixed username problem by changing the the method and action of the form in html
 - Bug solved with the displaying of score
 - validation for signup fixed
-
 
 ## Deployment 
 The site was deployd through Github pages 
@@ -101,11 +100,19 @@ The site was deployd through Github pages
 - The picture on the final page is from unsplash
     - [link to the site](https://unsplash.com/@simon_noh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     - credit: Simon Noh
+- [The fonts is from Google fonts](https://fonts.google.com/)
+- [The icons is from font awesome](https://fontawesome.com/)
 
 ### Credits to code
 - Inspiration on how to start of the code was taken from Ahmed
     - [Link to the repository](https://github.com/Ahmad528/quizApp/tree/main/quizwuiz)
 - Got help from code institute tutor with a more straight forward es6 code in the returnOriginalColor function
+- Also got general guidance from my asigned mentor Jubril Akolade
 
 ![The returnOriginalColor function](assets/image/tutorHelp.png)
 
+## Future Project Updates Ideas
+- Make the questions randomized 
+- Make a list of genres that can be selected by the user
+- Highscore board
+- Timer for the questions
