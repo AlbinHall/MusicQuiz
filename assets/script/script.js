@@ -76,8 +76,8 @@ function usernames(event) {
     event.preventDefault();
     loginHeader = document.getElementById("login-header")
 
-    if (username.value.length < 3 || username.value.trim() == "") {
-        loginHeader.innerHTML = "Please Enter A Valid Username longer than 2 characters"
+    if (username.value.length = "" || username.value.trim() == "") {
+        loginHeader.innerHTML = "Username can't be empty!"
     } else {
         loginHeader.innerHTML = "Welcome: " + username.value + "!"
         usernameArray.unshift(username.value)
@@ -120,13 +120,13 @@ function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
         scores.innerHTML = ++scores.innerHTML +  usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
 
-        a.style.backgroundColor = "green"
+        a.style.backgroundColor = "green";
     } else {
-        a.style.backgroundColor = "Red"
+        a.style.backgroundColor = "Red";
     };
 
-    allButtons.forEach(allButton => allButton.disable = true)
-    setTimeout(displayNextQuestion, 400)
+    a.disable = true
+    setTimeout(displayNextQuestion, 400);
 }
 
 

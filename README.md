@@ -77,12 +77,14 @@ The site has been manually tested by me during the building of the site and also
 - score not working correctly
 - sends user away from the site when submitting username
 - validation problem for signup
+- Able to cheat by quickly clicking the answer buttons
 
 ### solved bug / not solved bug
 - Problem with the color display when correct/wrong answer is fixed
 - Fixed username problem by changing the method and action of the form in HTML
 - Bug solved with the displaying of score
 - validation for signup fixed
+- Fixed the cheating with quick clicking by disabling the buttons after clicked 
 
 ## Deployment 
 The site was deployed through Github pages 

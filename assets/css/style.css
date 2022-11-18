@@ -241,6 +241,10 @@ a {
 
     @media screen and (max-width: 500px) {
 
+        #login-header {
+            font-size: 100%;
+        }
+
         .btn {
             border-radius: 10px;
             border: none;
