@@ -118,14 +118,13 @@ function displayQuestion() {
  */
 function scoreCount(a) {
     if (a.innerHTML === questionHolder[i].answer && scores.innerHTML < questionHolder.length) {
-        scores.innerHTML = ++scores.innerHTML +  usernameArray[0] + "'s score: " + scores.innerHTML + "/" + questionHolder.length;
-
+        scores.innerHTML = ++scores.innerHTML
         a.style.backgroundColor = "green";
     } else {
-        a.style.backgroundColor = "Red";
+        a.style.backgroundColor = "red";
     };
 
-    a.disable = true
+    //a.disable = true
     setTimeout(displayNextQuestion, 400);
 }
 

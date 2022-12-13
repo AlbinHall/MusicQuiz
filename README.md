@@ -78,6 +78,7 @@ The site has been manually tested by me during the building of the site and also
 - sends user away from the site when submitting username
 - validation problem for signup
 - Able to cheat by quickly clicking the answer buttons
+- Gives wrong answer when answering right
 
 ### solved bug / not solved bug
 - Problem with the color display when correct/wrong answer is fixed
@@ -85,6 +86,7 @@ The site has been manually tested by me during the building of the site and also
 - Bug solved with the displaying of score
 - validation for signup fixed
 - Fixed the cheating with quick clicking by disabling the buttons after clicked 
+- The score count messed with the logic of the scoreCount function, Fixed with re writing of code
 
 ## Deployment 
 The site was deployed through Github pages 
