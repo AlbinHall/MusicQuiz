@@ -72,6 +72,14 @@ The site's goal is to be a fun and easily accessible quiz. And for me to learn m
 ### Manually Tested
 The site has been manually tested by me during the building of the site and also the final version
 
+- Steps of manual testing
+    - test validation of whitespace in the username
+    - displaying the correct answers
+    - displaying the incorrect answers
+    - score count only adds score when the user gets the answer correct
+    - The home button resets the site/app
+    - the final page is displaying correctly
+
 ### bugs 
 - Bug that makes the color changing of the buttons not disappear 
 - score not working correctly
